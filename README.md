@@ -5,6 +5,6 @@
 #    This also shows which compilers we are using and what is the location for our smart 
 #    contracts
 # 2. /src/components/App.js - // React.js code for client side applications
-# 3. /src/contracts/Migrations.sol - // Default smart contract that comes with truffle project
-# 4. /migrations/1_initial_migration.js - // Migrations to put the smart contract on the block #    chain
+# 3. /src/contracts/Migrations.sol - // Default smart contract that comes with truffle project. Helps to deploy other smart contracts into the blockchain. 
+# 4. /migrations/1_initial_migration.js - // Migrations to put the smart contract on the blockchain
 # 5. package.json - Project specific dependencies in order to build the project 
