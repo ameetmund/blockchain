@@ -10,3 +10,4 @@
 > 6. _EthSwap.sol_ - Smart contract for the EthSwap exchange
 > 7. /migrations/_2_deploy_contracts.js - Migrations to put smart contract for EthSwap and Token into blockchain. This helps to change the state of the contract to the latest one. 
 > 8. _Token.sol_ - Smart contract for the new cypto currency that is going to be used for swap with Ethereum
+> 9. _test/EthSwap.test.js_ - File to write test cases in javascript. Solidity smart contract test will be done using this. The testings are carried out with the help of 'chai assertion library' which is added to the code.

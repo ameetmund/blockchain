@@ -1,5 +1,6 @@
 pragma solidity ^0.5.0;
 
+// Import token contract which will help to buy or sell tokens
 import "./Token.sol";
 
 contract EthSwap {
@@ -21,6 +22,9 @@ contract EthSwap {
         uint rate
     );
 
+    // Provides the address of the token. Please note that local
+    // variable _token is assigned to the state variable token, so
+    // that it can be used accross the smart contract.
     constructor(Token _token) public {
         token = _token;
     }

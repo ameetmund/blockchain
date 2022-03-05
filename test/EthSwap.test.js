@@ -11,11 +11,15 @@ require('chai')
 function tokens(n) {
     return web3.utils.toWei(n, 'ether');
 }
+
+// Deployer - First account within ganache
+// Investor - Other accounts in ganache. It's used to buy tokens.
 contract('EthSwap', ([deployer, investor]) => {
 
     let token, ethSwap
 
-    // Common code 
+    // Common code. Pass the token address to the EthSwap, so that it
+    // can use it for buy or sell later. 
     before(async () => {
         token = await Token.new()
         ethSwap = await EthSwap.new(token.address)
@@ -45,6 +49,7 @@ contract('EthSwap', ([deployer, investor]) => {
         })
     })
 
+    // Test for buyTokens functionality
     describe('buyTokens()', async () => {
         let result
 
@@ -77,6 +82,7 @@ contract('EthSwap', ([deployer, investor]) => {
         })
     })
 
+    // Test for sellTokens functionality
     describe('sellTokens()', async () => {
         let result
 
