@@ -8,6 +8,8 @@ import './App.css'
 
 class App extends Component {
 
+  // Special life cycle method in react that runs whenever the component
+  // is mounted to react virtual DOM  
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
@@ -16,9 +18,11 @@ class App extends Component {
   async loadBlockchainData() {
     const web3 = window.web3
 
+    // Fetch the account the set the state
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
 
+    // Fetch ether balance and set the state
     const ethBalance = await web3.eth.getBalance(this.state.account)
     this.setState({ ethBalance })
 
@@ -46,6 +50,7 @@ class App extends Component {
     this.setState({ loading: false })
   }
 
+  // Helps to connect the app to blockchain
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -75,6 +80,7 @@ class App extends Component {
     })
   }
 
+  // Set the state of the variables to default value
   constructor(props) {
     super(props)
     this.state = {

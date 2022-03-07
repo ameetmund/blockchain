@@ -54,6 +54,8 @@ contract('EthSwap', ([deployer, investor]) => {
         let result
 
         // Common code 
+        // from: represents the msg.sender in EthSwap.sol 
+        // value: represents the msg.value in EthSwap.sol
         before(async () => {
             // Purchase tokens
             result = await ethSwap.buyTokens({ from: investor, value: tokens('1')})
@@ -61,17 +63,20 @@ contract('EthSwap', ([deployer, investor]) => {
 
         it('Allows users to instantly purchase tokens from ethSwap for a fixed price', async () => {
             // Check investor token balance
+            // Investor balance will go up by 100 tokens
             let investorBalance = await token.balanceOf(investor)
             assert.equal(investorBalance.toString(), tokens('100'))
 
             // Check ethSwap balance after purchase
+            // EthSwap exchange balance will go down by 100 tokens
+            // Ether value will go down by 1 eth
             let ethSwapBalance
             ethSwapBalance = await token.balanceOf(ethSwap.address)
             assert.equal(ethSwapBalance.toString(), tokens('999900'))
             ethSwapBalance = await web3.eth.getBalance(ethSwap.address)
             assert.equal(ethSwapBalance.toString(), tokens('1'))
 
-            // Print the logs
+            // Print the event logs
             console.log(result.logs[0])
 
             const event = result.logs[0].args

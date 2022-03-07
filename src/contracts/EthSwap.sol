@@ -49,6 +49,7 @@ contract EthSwap {
         require(token.balanceOf(msg.sender) >= _amount);
 
         // Calculate total amount of ether to redeem
+        // For example - if user wants to sell 100 tokens then the ether amount becomes 1
         uint etherAmount = _amount / rate;
 
         // EthSwap must have enough ether 
