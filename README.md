@@ -29,8 +29,8 @@
                     import EthSwap from '../abis/EthSwap.json'
 ``` 
 > - _load smart contract in App.js_ - 
->   - _load Token_ - Fetch the networkId and using that get the token contract data
->   - _load EthSwap_ - Fetch the networkId and using that get the ethSwap contract data 
+>   - _load Token_ - Fetch the networkId and using that get the token contract data.
+>   - _load EthSwap_ - Fetch the networkId and using that get the ethSwap contract data. 
 > - _Main.js_ - All the content may take a while to display if we directly show it from App.js. While the state is loading it should only display 'Loading...'. Otherwise it should show contents from Main.js. 
 > - _BuyForm.js_ - Form used to buy tokens. Call is made through Main.js.
 > - _SellForm.js_ - Form used to sell tokens. Call is made through Main.js     
