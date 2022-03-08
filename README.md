@@ -23,4 +23,5 @@
 >     - _set the state variables_ - create a constructor functions to set the state of the variables like account, tokens etc to a default value.
 >     - _create Navbar.js_ - Create Navbar.js and add features to show account and identicon. Add Navbar in App.js 
 >     - _import smart contracts_ - Import EthSwap and Token abis files into App.js to, which will allow the front end to interact with smart contracts. 
->       -   ```Javascript Token from '../abis/Token.json'            import EthSwap from '../abis/EthSwap.json' ```
+>       -   ``Token from '../abis/Token.json'
+            ``import EthSwap from '../abis/EthSwap.json' 
