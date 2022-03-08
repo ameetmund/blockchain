@@ -15,11 +15,14 @@ class Navbar extends Component {
             EthSwap
             </a>
             <ul className='navbar-nav px-3'>
+                {/* Beautify the navbar */}
                 <li className='nav-item text-nowrap d-none d-sm-none d-sm-block'>
                     <small className='text-secondary'>
                         <small id='account'>{this.props.account}</small>
                     </small>
 
+                    {/* Send the account and identicon to navbar
+                        If the account exists then show the identicon */}
                     { this.props.account
                         ? <img
                           className='ml-2'

@@ -14,10 +14,10 @@
 > 9. _test/EthSwap.test.js_ - File to write test cases in javascript. Solidity smart contract test will be done using this. The testings are carried out with the help of 'chai assertion library' which is added to the code.
 
 ### Working steps
-> 1. _test the codes using EthSwap.test.js_ - Ensure that the code functionality is tested usin test.js. This is by following TDD approach. 
-> 2. _set up front end_ - 
-    > a. _connect browser to blockchain_ - Use Metamask to connect the browser to blockchain. The reason for this is web browser doesn't talk to the blockchain directly. So this browser extension helps to achieve that. Set up ganache test network by choosing the private key for one of the accounts.
-    > b. _connect app to blockchain_ - We will do this by using web3. It works with the concept of an ethereum provider. Metamask connects to an ethereum node and talk to the blockchain, and it does that using ganache, and then metamask exposes that as a provider to web3 library. 
-        > (i). _loadweb3_ - load web3 in App.js
-        > (ii). _loadblockchaindata_ - Get all the account details through metamask account that is connected.
+> - 1. _test the codes using EthSwap.test.js_ - Ensure that the code functionality is tested usin test.js. This is by following TDD approach. 
+> - 2. _set up front end_ - 
+    > - a. _connect browser to blockchain_ - Use Metamask to connect the browser to blockchain. The reason for this is web browser doesn't talk to the blockchain directly. So this browser extension helps to achieve that. Set up ganache test network by choosing the private key for one of the accounts.
+    > - b. _connect app to blockchain_ - We will do this by using web3. It works with the concept of an ethereum provider. Metamask connects to an ethereum node and talk to the blockchain, and it does that using ganache, and then metamask exposes that as a provider to web3 library. 
+        > - (i). _loadweb3_ - load web3 in App.js
+        > - (ii). _loadblockchaindata_ - Get all the account details through metamask account that is connected.
         > (iii). _set the state variables_ - create a constructor functions to set the state of the variables like account, tokens etc to a default value.
