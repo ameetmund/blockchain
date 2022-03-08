@@ -108,6 +108,7 @@ class App extends Component {
 
     return (
       <div>
+        {/* Get the account with setstate value in navbar*/}
         <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
