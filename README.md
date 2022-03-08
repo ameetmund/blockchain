@@ -22,10 +22,17 @@
 >     - _loadblockchaindata_ - Get all the account details through metamask account that is connected.
 >     - _set the state variables_ - create a constructor functions to set the state of the variables like account, tokens etc to a default value.
 >     - _create Navbar.js_ - Create Navbar.js and add features to show account and identicon. Add Navbar in App.js 
->     - _import smart contracts_ - Import EthSwap and Token abis files into App.js to, which will allow the front end to interact with smart contracts.
-
+>     - _import smart contracts_ - Import EthSwap and Token abis files into App.js to, which will allow the front end to interact with smart contracts. 
+>       
 ```Javascript 
-                    Token from '../abis/Token.json'
+                    import Token from '../abis/Token.json'
                     import EthSwap from '../abis/EthSwap.json'
 ``` 
->    - _load Token_ - Fetch the networkId and using that get the token data  
+> - _load smart contract in App.js_ - 
+>   - _load Token_ - Fetch the networkId and using that get the token contract data
+>   - _load EthSwap_ - Fetch the networkId and using that get the ethSwap contract data 
+> - _Main.js_ - All the content may take a while to display if we directly show it from App.js. While the state is loading it should only display 'Loading...'. Otherwise it should show contents from Main.js. 
+> - _BuyForm.js_ - Form used to buy tokens. Call is made through Main.js.
+> - _SellForm.js_ - Form used to sell tokens. Call is made through Main.js     
+
+
